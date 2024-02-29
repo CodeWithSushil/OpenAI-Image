@@ -1,5 +1,9 @@
 {
   "name": "openai-api/text-to-image",
+  "type": "project",
+  "description": "OpenAI text-to-image",
+  "keywords": ["openai", "dalle-3", "chatgpt", "text to image"],
+  "license": "MIT",
   "autoload": {
     "psr-4": {
       "App\\": "app/"
@@ -7,6 +11,11 @@
     "files": [
       "app/Helper.php"
     ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
   },
   "require": {
     "razorpay/razorpay": "^2.9",
@@ -31,5 +40,7 @@
   },
   "require-dev": {
     "pestphp/pest": "^2.31"
-  }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
 }
