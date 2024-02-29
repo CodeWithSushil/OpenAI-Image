@@ -1,3 +1,5 @@
-vendor
+/vendor
 .env
 .env.example
+/public/assets 
+
