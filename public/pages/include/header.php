@@ -12,4 +12,5 @@ echo $trim = ucwords($name);
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link href="public/assets/css/bulma.min.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="is-family-sans-serif">
+
