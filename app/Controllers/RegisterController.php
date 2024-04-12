@@ -7,7 +7,7 @@ class RegisterController{
     view("pages.register");
   }
   
-  public function login(){
+  public function register(){
 
     $obj = new User();
 
