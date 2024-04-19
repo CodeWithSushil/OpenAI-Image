@@ -27,7 +27,7 @@
                 <div class="field">
                   <div class="control">
                     <label class="checkbox">
-                      <input type="checkbox" /> Remember me
+                      <input type="checkbox" name="remember"/> Remember me
                     </label>
                   </div>
                 </div>

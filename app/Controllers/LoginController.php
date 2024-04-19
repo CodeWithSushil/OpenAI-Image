@@ -9,8 +9,11 @@ class LoginController{
   
   public function login(){
     $obj = new User();
-    $obj->email = $_POST["email"];
-    $obj->password = $_POST["password"];
+    echo "<pre>";
+    print_r($obj->login());
+
+    $obj->email = "heloo";// $_POST["email"];
+   // $obj->password = $_POST["password"];
     
     if ($obj->login()) {
       $_SESSION["user"] = $obj->username;
