@@ -1,8 +1,8 @@
 <?php pageAdd("include/header.php"); ?>
-<section class="section">
+<section style="height:100vh;" class="section is-flex is-justify-content-center is-align-items-center">
 <div class="container">
-<div class="columns vcentered">
-<div class="column">
+<div class="columns is-vcentered is-centered">
+<div class="column is-6-desktop is-8-tablet">
 <div class="card">
 <div class="card-content">
 <p class="title has-text-centered is-uppercase has-text-link">Register Page</p>
@@ -33,7 +33,7 @@
 </p>
 </div>
 
-<div class="field is-grouped">
+<div class="field is-flex is-justify-content-space-between is-align-items-center">
 <p class="control">
 <button class="button is-link" type="submit" name="submit">Register</button>
 </p>

@@ -1,8 +1,8 @@
 <?php pageAdd("include/header.php"); ?>
-<section class="section">
+<section style="height:100vh;" class="section is-flex is-justify-content-center is-align-items-center">
   <div class="container">
-    <div class="columns vcentered">
-      <div class="column">
+    <div class="columns is-vcentered is-centered">
+      <div class="column is-6-desktop is-8-tablet">
         <div class="card">
           <div class="card-content">
             <p class="title has-text-centered is-uppercase has-text-link">Login Page</p>
@@ -31,7 +31,7 @@
                     </label>
                   </div>
                 </div>
-                <div class="field is-grouped">
+                <div class="field is-grouped is-flex is-justify-content-space-between is-align-items-center">
                   <p class="control">
                     <button class="button is-link" type="submit" name="submit">Login</button>
                   </p>
@@ -39,6 +39,11 @@
                     <a class="button is-dark" href="/register">Register</a>
                   </p>
                 </div>
+<div class="field">
+<div class="control has-text-centered">
+<a style="width:100%;" class="is-primary has-text-white button" href="/forget-password">Forget Password</a>
+</div>
+</div>
               </form>
             </div>
           </div>
