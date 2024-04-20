@@ -8,17 +8,20 @@ class RegisterController{
   }
   
   public function register(){
+    
+    $user = new User();
+    $user->name = $_POST["name"];
+    $user->username = $_POST["username"];
+    $user->email = $_POST["email"];
+    $user->password = $_POST["password"];
+    $user->user_ip = $_SERVER['REMOTE_ADDR'];
+    $user->user_system = $_SERVER['HTTP_USER_AGENT'];
 
-    $obj = new User();
-
-    $obj->email = $_POST["email"];
-    $obj->password = $_POST["password"];
-
-    if ($obj->login()) {
-      $_SESSION["user"] = $obj->username;
-      redirect("dashboard");
+    if ($user->register()) {
+      $_SESSION["username"] = $user->username;
+      redirect("login");
     } else {
-      echo "User unable to login.";
+      echo "User unable to register.";
     }
   }
 }

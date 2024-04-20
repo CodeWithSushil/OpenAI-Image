@@ -1,4 +1,12 @@
-<?php pageAdd("include/header.php"); ?>
+<?php 
+pageAdd("include/header.php");
+$email = "";
+$password = "";
+if(isset($_SESSION['email']) && isset($_SESSION['password'])){
+  $email=$_SESSION['email'];
+  $password=$_SESSION['password'];
+}
+?>
 <section style="height:100vh;" class="section is-flex is-justify-content-center is-align-items-center">
   <div class="container">
     <div class="columns is-vcentered is-centered">
@@ -10,7 +18,7 @@
               <form method="POST" action="/submit-login">
                 <div class="field">
                   <p class="control has-icons-left has-icons-right">
-                    <input class="input" type="email" name="email" placeholder="Email" required />
+                    <input class="input" type="email" name="email" placeholder="Email" value="<?php echo $email;?>" required />
                     <span class="icon is-small is-left">
                       <i class="fas fa-envelope"></i>
                     </span>
@@ -18,7 +26,7 @@
                 </div>
                 <div class="field">
                   <p class="control has-icons-left">
-                    <input class="input" type="password" name="password" placeholder="Password" required />
+                  <input class="input" type="password" name="password" placeholder="Password" value="<?php echo $password;?>" required />
                     <span class="icon is-small is-left">
                       <i class="fas fa-lock"></i>
                     </span>

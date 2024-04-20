@@ -8,18 +8,28 @@ class LoginController{
   }
   
   public function login(){
-    $obj = new User();
-    echo "<pre>";
-    print_r($obj->login());
+    $user = new User();
+    $user->email = $_POST['email'];
+    $user->password = $_POST['password'];
+    $user->user_ip = $_SERVER['REMOTE_ADDR'];
+    $user->user_system = $_SERVER['HTTP_USER_AGENT'];
 
-    $obj->email = "heloo";// $_POST["email"];
-   // $obj->password = $_POST["password"];
-    
-    if ($obj->login()) {
-      $_SESSION["user"] = $obj->username;
-      redirect("dashboard");
+    if(isset($_POST['remember']))
+    {
+      $_SESSION['email']=$_POST['email'];
+      $_SESSION['password']=$_POST['password'];
+    }
+    else
+    {
+      $_SESSION['email']="";
+      $_SESSION['password']="";
+    }
+
+    if($user->login()){
+      $_SESSION['username']= $user->username;
+      redirect("/");
     } else {
-      echo "User unable to login.";
+      echo "Invaild email or password.";
     }
   }
 }

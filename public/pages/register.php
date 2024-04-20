@@ -18,6 +18,14 @@
 </div>
 <div class="field">
 <p class="control has-icons-left has-icons-right">
+<input class="input" type="text" name="username" placeholder="Username" required />
+<span class="icon is-small is-left">
+<i class="fas fa-user"></i>
+</span>
+</p>
+</div>
+<div class="field">
+<p class="control has-icons-left has-icons-right">
 <input class="input" type="email" name="email" placeholder="Email" required />
 <span class="icon is-small is-left">
 <i class="fas fa-envelope"></i>
