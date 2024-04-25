@@ -14,17 +14,6 @@ class LoginController{
     $user->user_ip = $_SERVER['REMOTE_ADDR'];
     $user->user_system = $_SERVER['HTTP_USER_AGENT'];
 
-    if(isset($_POST['remember']))
-    {
-      $_SESSION['email']=$_POST['email'];
-      $_SESSION['password']=$_POST['password'];
-    }
-    else
-    {
-      $_SESSION['email']="";
-      $_SESSION['password']="";
-    }
-
     if($user->login()){
       $_SESSION['username']= $user->username;
       redirect("/");

@@ -7,4 +7,11 @@ class DashboardController
   {
     view("pages.dashboard");
   }
+
+  public function logout()
+  {
+    $_SESSION = [];
+    session_destroy();
+    redirect("login");
+  }
 }

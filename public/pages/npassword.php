@@ -1,13 +1,24 @@
-<?php pageAdd("include/header.php"); ?>
+<?php
+pageAdd("include/header.php");
+$email = "";
+if(isset($_SESSION['email'])){
+  $email=$_SESSION['email'];
+}
+?>
 <section class="section">
   <div class="container">
     <div class="columns">
       <div class="column">
         <div class="card">
           <div class="card-content">
-            <p class="title has-text-centered is-uppercase has-text-link">New Password</p>
+            <p class="title is-size-5-mobile has-text-centered is-uppercase has-text-link">New Password</p>
             <div class="content">
-              <form method="POST" action="/new-password">
+              <form method="POST" action="/submit-password">
+<div class="field">
+<p class="control">
+<input class="input" name="email" type="hidden" value="<?php echo $email; ?>">
+</p>
+</div>
                 <div class="field">
                   <p class="control has-icons-left has-icons-right">
                     <input class="input" type="password" name="password" placeholder="New Password" required />

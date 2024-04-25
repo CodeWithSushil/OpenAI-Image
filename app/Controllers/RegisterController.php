@@ -18,7 +18,6 @@ class RegisterController{
     $user->user_system = $_SERVER['HTTP_USER_AGENT'];
 
     if ($user->register()) {
-      $_SESSION["username"] = $user->username;
       redirect("login");
     } else {
       echo "User unable to register.";

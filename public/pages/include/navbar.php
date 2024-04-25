@@ -15,7 +15,16 @@
       <a class="navbar-item" href="/">Home</a>
       <a class="navbar-item" href="#">About</a>
       <a class="navbar-item" href="#">Services</a>
-      <a class="navbar-item" href="/login">Login</a>
+<?php
+if(isset($_SESSION['username'])) {
+  if($_SERVER['REQUEST_URI'] == "/dashboard"){ ?>
+    <a class="navbar-item" href="/logout">Logout</a>
+<?php } else { ?>
+    <a class="navbar-item" href="/dashboard">Dashboard</a>
+<?php
+  } } else { ?>
+  <a class="navbar-item" href="/login">Login</a>
+<?php } ?>
     </div>
   </div>
 </nav>
