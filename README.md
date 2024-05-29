@@ -9,8 +9,14 @@
 ```bash
 git clone https://github.com/CodeWithSushil/OpenAI-Image.git 
 ```
+```bash
+cd OpenAI-Image
+```
 
 ### App Running
 ```bash
 php -S localhost:8080
+```
+```bash
+mysqld (MySQL server start).
 ```
