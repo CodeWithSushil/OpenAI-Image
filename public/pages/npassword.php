@@ -5,10 +5,10 @@ if(isset($_SESSION['email'])){
   $email=$_SESSION['email'];
 }
 ?>
-<section class="section">
+<section style="height:100vh;" class="section is-flex is-justify-content-center is-align-items-center">
   <div class="container">
-    <div class="columns">
-      <div class="column">
+    <div class="columns is-vcentered is-centered">
+      <div class="column is-6-desktop is-8-tablet">
         <div class="card">
           <div class="card-content">
             <p class="title is-size-5-mobile has-text-centered is-uppercase has-text-link">New Password</p>
